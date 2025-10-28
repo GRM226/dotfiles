@@ -78,8 +78,8 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 # Eza
-alias ls="exa --color=auto --group-directories-first"
-alias la="exa -la"
+alias ls="eza --color=auto --group-directories-first"
+alias la="eza -la"
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias tree="eza --tree --level=2  --icons --git"
