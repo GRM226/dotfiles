@@ -65,11 +65,6 @@ alias cp="cp -iv"
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-# Brew shortcuts
-alias brewi="brew install"
-alias brewu="brew uninstall"
-alias brewup="brew update"
-
 # Dirs
 alias ..="cd .."
 alias ...="cd ../.."
@@ -84,17 +79,9 @@ alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias tree="eza --tree --level=2  --icons --git"
 
-# Git
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gl="git log --oneline"
-
 # Autre
 alias cl='clear'
 alias la=tree
-
 
 # =============================================================================
 # ALIAS GIT
@@ -108,15 +95,24 @@ alias gb="git branch"
 alias gco="git checkout"
 
 # =============================================================================
-# ALIAS NMAP / SÉCU (pour ton job chez Scor)
+# ALIAS LINUX
 # =============================================================================
-alias nmap-syn="nmap -sS"
-alias nmap-udp="nmap -sU"
-alias nmap-full="nmap -p- -A"
-alias nmap-vuln="nmap --script vuln"
-alias nmap-service="nmap -sV"
-alias ssh-scan="nmap -p 22 -sV"
-alias http-scan="nmap -p 80,443 -sV"
+#Arch
+alias install="sudo pacman -S"
+
+#Redhat
+alias dnfi="sudo dnf install"
+
+#Debian
+alias apti="sudo apt get"
+
+# =============================================================================
+# ALIAS MACOS
+# =============================================================================
+# Brew shortcuts
+alias brewi="brew install"
+alias brewu="brew uninstall"
+alias brewup="brew update"
 
 # =============================================================================
 # VARIABLES D'ENVIRONNEMENT
