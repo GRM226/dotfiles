@@ -29,6 +29,11 @@ zstyle ':completion:*' menu select
 # =============================================================================
 # PLUGINS - ORDRE IMPORTANT
 # =============================================================================
+# --- Source plugins --- #
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+# --- Source plugins --- #
+
 # D'abord les plugins de base
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
