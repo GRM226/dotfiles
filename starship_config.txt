@@ -1,0 +1,225 @@
+add_newline = false
+palette = "catppuccin_mocha"
+command_timeout = 1000
+
+# ============================================
+# FORMAT PRINCIPAL
+# ============================================
+
+# Prompt gauche - infos principales
+format = """$username\
+$directory\
+$battery\
+$git_branch\
+$git_status\
+$golang\
+$python\
+$rust\
+$nodejs\
+$aws\
+$kubernetes\
+$docker_context
+$character"""
+
+# Prompt droite - infos secondaires
+right_format = """$cmd_duration$time"""
+
+# ============================================
+# CARACTÈRE DE PROMPT
+# ============================================
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+vimcmd_symbol = "[N](bold green) >>>"
+vimcmd_visual_symbol = "[V](bold yellow) >>>"
+vimcmd_replace_symbol = "[R](bold purple) >>>"
+
+# ============================================
+# RÉPERTOIRE
+# ============================================
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$read_only]($read_only_style)[$path]($style) "
+style = "bold cyan"
+read_only = " 🔒"
+read_only_style = "bold red"
+home_symbol = "~"
+
+[directory.substitutions]
+'~/tests/starship-custom' = 'work-project'
+'~/dotfiles' = 'dotfiles'
+
+# ============================================
+# GIT
+# ============================================
+
+[git_branch]
+format = "on [$symbol$branch(:$remote_branch)]($style) "
+style = "bold purple"
+symbol = " "
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "bold red"
+conflicted = "🏳"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# ============================================
+# LANGAGES & OUTILS
+# ============================================
+
+[golang]
+symbol = " "
+style = "bold cyan"
+format = "[$symbol($version )]($style)"
+disabled = false
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+disabled = false
+
+[rust]
+symbol = "🦀"
+style = "bold red"
+format = "[$symbol($version )]($style)"
+disabled = false
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol($version )]($style)"
+disabled = false
+
+[docker_context]
+symbol = "🐳"
+style = "bold blue"
+format = "[$symbol($context )]($style)"
+disabled = false
+
+[kubernetes]
+symbol = "☸ "
+style = "bold cyan"
+format = "[$symbol($context( \\($namespace\\)))]($style) "
+disabled = false
+contexts = [
+  { context_pattern = "arn:aws:eks:us-west-2:577926974532:cluster/zd-pvc-omer", style = "green", context_alias = "omerxx", symbol = " " },
+]
+
+# ============================================
+# BATTERIE
+# ============================================
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+unknown_symbol = "❓ "
+empty_symbol = "🪫 "
+format = "[$symbol$percentage]($style) "
+disabled = false
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 0
+style = "bold red"
+
+# ============================================
+# AWS
+# ============================================
+
+[aws]
+symbol = "☁️ "
+style = "bold orange"
+format = "[$symbol($profile )(\\($region\\) )(\\[$duration\\] )]($style)"
+disabled = false
+
+# ============================================
+# USERNAME & HOSTNAME
+# ============================================
+
+[username]
+style_user = "bold cyan"
+style_root = "bold red"
+format = "[$user]($style) @ "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+ssh_symbol = "🌐 "
+format = "[$ssh_symbol($hostname )]($style)"
+style = "bold green"
+disabled = false
+
+# ============================================
+# DURÉE DE COMMANDE & HEURE
+# ============================================
+
+[cmd_duration]
+min_time = 500
+show_milliseconds = false
+format = "took [$duration]($style) "
+style = "bold yellow"
+disabled = false
+
+[time]
+disabled = false
+format = "🕙[$time]($style) "
+time_format = "%R"
+style = "bold white"
+
+# ============================================
+# COULEURS - Catppuccin Mocha
+# ============================================
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
