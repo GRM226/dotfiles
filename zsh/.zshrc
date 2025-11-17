@@ -99,7 +99,7 @@ alias gco="git checkout"
 # ALIAS LINUX
 # =============================================================================
 #Arch
-alias install="sudo pacman -S"
+alias install="sudo pacman -Syu --noconfirm"
 alias remove="sudo pacman -R"
 
 #Redhat
