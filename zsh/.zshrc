@@ -100,6 +100,7 @@ alias gco="git checkout"
 # =============================================================================
 #Arch
 alias install="sudo pacman -S"
+alias remove="sudo pacman -R"
 
 #Redhat
 alias dnfi="sudo dnf install"
