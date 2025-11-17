@@ -70,6 +70,11 @@ alias cp="cp -iv"
 alias rm="rm -iv"
 alias mv="mv -iv"
 
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+
 # Dirs
 alias ..="cd .."
 alias ...="cd ../.."
@@ -134,4 +139,4 @@ eval "$(thefuck --alias)"
 # =============================================================================
 # STARSHIP PROMPT (optionnel - décommente si tu veux)
 # =============================================================================
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
